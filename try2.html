@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        position: relative;
+      }
+      /* .container {
+        max-width: 100%;
+        
+      } */
+      img {
+        width: 100%;
+        height: 500px;
+        opacity: 0.9;
+      }
+      .img {
+        position: relative;
+        object-fit: cover;
+        height: auto;
+        width: 100%;
+      }
+      .sentra {
+        position: absolute;
+        color: whitesmoke;
+        right: 10px;
+        justify-content: center;
+        top: 200px;
+        font-size: 30px;
+        font-weight: bold;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+      .a {
+        font-size: 10px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        padding-right: 50px;
+      }
+      .img1 {
+        padding-left: 200px;
+      }
+      .img1 > div {
+        width: 250px;
+        height: 200px;
+        display: inline-block;
+        margin-right: 15px;
+        vertical-align: top;
+      }
+      .nm {
+        display: grid;
+        padding-left: 300px
+      
+      }
+      button {
+        padding: 10px;
+      }
+      .place {
+        height: auto;
+        width: 100vw;
+        position: relative;
+        padding-left: 200px;
+      }
+      strong {
+        color: blue;
+        font-size: large;
+      }
+      .rows > img {
+        height: 350px;
+      }
+      .aa {
+        position: relative;
+        height: auto;
+        width: 100%;
+        top: 320px;
+        display: grid;
+        padding-left: 300px;
+      
+      }
+      .cont {
+        width: 60%;
+        margin: 2rem auto;
+        /* padding-right: 200px; */
+      }
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(8, 5vw);
+        grid-gap: 1.5rem;
+      }
+      .gallery__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .gallery__item--1 {
+        grid-column-start: 1;
+        grid-column-end: 6;
+        grid-row-start: 1;
+        grid-row-end: 7;
+      }
+      .gallery__item--2 {
+        grid-column-start: 6;
+        grid-column-end: 9;
+        grid-row-start: 1;
+        grid-row-end: 4;
+      }
+      .gallery__item--3 {
+        grid-column-start: 6;
+        grid-column-end: 9;
+        grid-row-start: 4;
+        grid-row-end: 7;
+      }
+      .gallery__item--4 {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 7;
+        grid-row-end: 9;
+      }
+      .gallery__item--5 {
+        grid-column-start: 4;
+        grid-column-end: 9;
+        grid-row-start: 7;
+        grid-row-end: 9;
+      }
+      .bb {
+        width: 70%;
+        background-color: rgb(239, 237, 236);
+        font-family: "Franklin Gothic large", "Arial Narrow", Arial, sans-serif;
+        margin: auto;
+        /* padding: 20px; */
+        text-align: center;
+        position: relative;
+        /* top: 800px; */
+      }
+      .b1 {
+        font-size: 35px;
+        justify-items: center;
+
+      }
+      .b2 {
+        font-size: 18px;
+        line-height: 50px;
+      }
+      .b3 {
+        opacity: 0.6;
+      }
+      iframe {
+        padding: 20px 10px;
+        padding-right: 60px;
+      }
+      .b4{
+        background-color: blueviolet;
+
+      }
+      #blog {
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-bottom: 80px;
+      }
+
+      #blog .tabs {
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+        height: 90px;
+        width: 100%;
+        background-color: #eee;
+        border-bottom: 10px solid #45489a;
+      }
+
+      #blog .tabs li {
+        display: inline-block;
+        text-align: center;
+        width: 25%;
+        float: left;
+        margin: 0;
+        padding: 0;
+      }
+
+      #blog .tabs a {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        text-transform: capitalize;
+        letter-spacing: 0.5px;
+        color: #232323;
+        font-size: 19px;
+        line-height: 80px;
+        font-weight: 600;
+        transition: 0.5s;
+      }
+
+      #blog .tabs a:hover {
+        color: #45489a;
+      }
+
+
+      #blog .tabs .active:hover {
+        color: #fff;
+      }
+
+      #blog .tabs .active {
+        background-color: #45489a;
+        color: #fff;
+      }
+
+      .tabgroup {
+        background-color: #f4f4f4;
+        padding: 20px 30px;
+      }
+
+      .clearfix:after {
+        content:"";
+        display:table;
+        clear:both;
+      }
+
+      #blog .tabgroup ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      #blog .tabgroup ul li {
+        display: inline-block;
+        text-align: left;
+        margin-bottom: 10px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #ddd;
+      }
+
+      #blog .tabgroup ul li:last-child {
+        border-bottom: none;
+        margin-bottom: 0px;
+        padding-bottom: 10px;
+      }
+
+      #blog .tabgroup ul li img {
+        float: left;
+        margin-right: 30px;
+        max-width: 100%;
+        overflow: hidden;
+      }
+      #blog .tabgroup ul li .text-content {
+        display: inline;
+      }
+
+      #blog .item .text-content h4 {
+        padding-top: 7.5px;
+        margin-top: 0px;
+        margin-bottom: 5px;
+        font-size: 21px;
+        font-weight: 600;
+        color: #232323;
+        letter-spacing: 0.5px;
+      }
+
+      #blog .item .text-content span {
+        display: inline-block;
+        font-size: 15px;
+        font-weight: 600;
+        color: #7a7a7a;
+        letter-spacing: 0.5px;
+        margin-bottom: 15px;
+      }
+
+      #blog .item .text-content .accent-button {
+        margin-top: 25px;
+      }
+
+      #contact {
+  padding-top: 0px;
+}
+
+#contact-content {
+  padding: 80px 60px;
+}
+
+#contact input {
+  border-radius: 0px;
+  padding-left: 15px;
+  font-size: 13px;
+  color: #aaa;
+  background-color: #f4f4f4;
+  border: 1px solid #eee;
+  outline: none;
+  box-shadow: none;
+  line-height: 40px;
+  height: 40px;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+#contact textarea {
+  border-radius: 0px;
+  padding-left: 15px;
+  padding-top: 10px;
+  font-size: 13px;
+  color: #aaa;
+  background-color: #f4f4f4;
+  border: 1px solid #eee;
+  outline: none;
+  box-shadow: none;
+  height: 200px;
+  max-height: 250px;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 25px;
+}
+
+#contact button {
+  font-size: 13px;
+  border-radius: 0px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: capitalize;
+  background-color: #45489a;
+  display: inline-block;
+  height: 44px;
+  line-height: 24px;
+  outline: none;
+  box-shadow: none;
+  width: 100%;
+  letter-spacing: 0.25px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+#contact button:hover {
+  color: #232323;
+  background-color: #f4f4f4;
+}
+
+
+
+/* Footer Style */
+
+.footer {
+  background-color: rgba(12,12,12,0.9);
+  height: 80px;
+  line-height: 80px;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+.footer p {
+  margin-bottom: 0px;
+  font-size: 13px;
+  line-height: 80px;
+  color: #fff;
+  letter-spacing: 0.5px;
+  font-weight: 300;
+}
+
+.footer p a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="img">
+        <img src="./slide_1.jpg" alt="Slide Image"/>
+          <div class="sentra">
+            Beautiful Template <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Sentra
+            <div class="a">
+                This is a HTML CSS template provided by templatemo website.
+                <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Please
+                tell your friends about our site.
+            </div>
+            <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>
+                Discover More
+            </button>
+          </div>
+      </div>
+      <div class="nm">
+        <div class="place">
+          <p>
+            Featured &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; praesent
+            pellentesque efficitur magna, <br /><strong>Place</strong>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sed
+            pellentesque neque malesuada vitae.
+          </p>
+        </div>
+        <div class="img1">
+          <div class="rows">
+            <img src="./featured_1.jpg" alt="Featured Image 1" />
+            <p>
+              <b>Lorem ipsum dolor</b> <br>
+              Proin et sapien<br><br>
+              #1 Vestibulum ante ipsum primis in faucibus orci luctus et
+              ultrices posuere cubilia Curae; Sed at massa turpis. Fusce ut
+              pretium dui, vitae ullamcorper velit.
+            </p>
+          </div>
+          <div class="rows">
+            <img src="./featured_2.jpg" alt="Featured Image 2" />
+            <p>
+              <b>Phasellus a lacus ac odio</b> <br>
+              Maximus <br><br>
+              #2 Vestibulum ante ipsum primis in faucibus orci luctus et
+              ultrices posuere cubilia Curae; Sed at massa turpis. Fusce ut
+              pretium dui, vitae ullamcorper velit.
+            </p>
+          </div>
+          <div class="rows">
+            <img src="./featured_3.jpg" alt="Featured Image 3" />
+            <p>
+              <b>Proin sit amet fringilla</b> <br>
+              Vulputate<br><br>
+              #3 Aliquam mollis lacus eget metus efficitur lobortis. Suspendisse
+              libero lacus, accumsan vitae commodo tristique, luctus gravida
+              metus.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="aa">
+        <div class="place">
+          <p>
+            Recent &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; praesent
+            pellentesque efficitur magna, <br /><strong>Projects</strong>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sed
+            pellentesque neque malesuada vitae.
+          </p>
+        </div>
+        <div class="cont">
+          <div class="gallery">
+            <figure class="gallery_item gallery_item--1">
+              <img src="./portfolio_big_1.jpg" alt="Gallery image 1" class="gallery__img" />
+            </figure>
+            <figure class="gallery_item gallery_item--2">
+              <img src="./portfolio_big_2.jpg" alt="Gallery image 2" class="gallery__img" />
+            </figure>
+            <figure class="gallery_item gallery_item--3">
+              <img src="./portfolio_big_3.jpg" alt="Gallery image 3" class="gallery__img" />
+            </figure>
+            <figure class="gallery_item gallery_item--4">
+              <img src="./portfolio_big_4.jpg" alt="Gallery image 4" class="gallery__img" />
+            </figure>
+            <figure class="gallery_item gallery_item--5">
+              <img src="./portfolio_big_5.jpg" alt="Gallery image 5" class="gallery__img" />
+            </figure>
+          </div>
+        </div>
+      </div>
+      
+      <div class="bb">
+        <div class="b1">This is a <strong>company</strong> presentation.</div>
+          <div class="b2">
+            Praesent pellentesque efficitur magna, sed pellentesque neque malesuada vitae.
+          </div>
+          <p class="b3">
+            In eget ipsum sed lorem vehicula luctus. Curabitur non dolor rhoncus, hendrerit justo sit amet, vestibulum turpis. Pellentesque id auctor tellus, vel ultricies augue. Duis condimentum aliquet blandit. Fusce rhoncus et eros ut pharetra. Phasellus convallis ultricies ligula ac gravida.
+          </p>
+          <button class="b4">Continue reading</button><br />
+          <iframe width="720" height="440" src="https://www.youtube.com/embed/j-_7Ub-Zkow?si=ryAL78guq2jEdDAf" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>  
+      
+      <section id="blog" class="content-section">
+        <div class="section-heading">
+            <h1>Blog<br><em>Entries</em></h1>
+            <p>Curabitur hendrerit mauris mollis ipsum vulputate rutrum. 
+            <br>Phasellus luctus odio eget dui imperdiet.</p>
+        </div>
+
+        <div class="section-content">
+          <div class="tabs-content">
+            <div class="wrapper">
+              <ul class="tabs clearfix" data-tabgroup="first-tab-group">
+                <li><a href="#tab1" class="active">July 2018</a></li>
+                <li><a href="#tab2">June 2018</a></li>
+                <li><a href="#tab3">May 2018</a></li>
+                <li><a href="#tab4">April 2018</a></li>
+              </ul>
+              <section id="first-tab-group" class="tabgroup">
+                <div id="tab1">
+                  <ul>
+                    <li>
+                      <div class="item">
+                        <img src="./blog_1.jpg" alt="">
+                        <div class="text-content">
+                          <h4>Integer ultrices augue</h4>
+                          <span>25 July 2018</span>
+                          <p>Nam vel egestas nisi. Nullam lobortis magna at enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis lorem quis ipsum maximus finibus.</p>
+                          <div class="accent-button button">
+                            <a href="#contact">Continue Reading</a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item">
+                        <img src="./blog_2.jpg" alt="">
+                        <div class="text-content">
+                          <h4>Cras commodo odio ut</h4>
+                          <span>16 July 2018</span>
+                          <p>Nam vel egestas nisi. Nullam lobortis magna at enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis lorem quis ipsum maximus finibus.</p>
+                          <div class="accent-button button">
+                            <a href="#contact">Continue Reading</a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item">
+                        <img src="./blog_3.jpg" alt="">
+                        <div class="text-content">
+                          <h4>Sed at massa turpis</h4>
+                          <span>10 July 2018</span>
+                          <p>Nam vel egestas nisi. Nullam lobortis magna at enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis lorem quis ipsum maximus finibus.</p>
+                          <div class="accent-button button">
+                            <a href="#contact">Continue Reading</a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>  
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </section>  
+      <section id="contact" class="content-section"></section>      
+      <div id="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1197183.8373802372!2d-1.9415093691103689!3d6.781986417238027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdb96f349e85efd%3A0xb8d1e0b88af1f0f5!2sKumasi+Central+Market!5e0!3m2!1sen!2sth!4v1532967884907" width="100%" height="400px" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+      
+      <div id="contact-content">
+        <div class="section-heading">
+          <h1>Contact<br><em>Sentra</em></h1>
+          <p>Curabitur hendrerit mauris mollis ipsum vulputate rutrum. 
+          <br>Phasellus luctus odio eget dui imperdiet.</p>
+        </div>
+        <div class="section-content">
+          <form id="contact" action="#" method="post">
+            <div class="row">
+              <div class="col-md-4">
+                <fieldset>
+                  <input name="name" type="text" class="form-control" id="name" placeholder="Your name..." required="">
+                </fieldset>
+              </div>
+                    
+              <div class="col-md-4">
+                <fieldset>
+                  <input name="email" type="email" class="form-control" id="email" placeholder="Your email..." required="">
+                </fieldset>
+              </div>
+
+              <div class="col-md-4">
+                <fieldset>
+                  <input name="subject" type="text" class="form-control" id="subject" placeholder="Subject..." required="">
+                </fieldset>
+              </div>
+
+              <div class="col-md-12">
+                <fieldset>
+                  <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..." required=""></textarea>
+                </fieldset>
+              </div>
+              <div class="col-md-12">
+                <fieldset>
+                  <button type="submit" id="form-submit" class="btn">Send Message Now</button>
+                </fieldset>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="footer">
+      <p>Copyright &copy; 2018. Design: <a href="http://templatemo.com/tm-518-sentra" target="_blank">Sentra</a> | Distribution: <a href="https://themewagon.com" target="_blank">ThemeWagon</a></p>
+    </section>
+  </div>
+    </div>
+  </body>
+</html>

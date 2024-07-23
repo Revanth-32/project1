@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        position: relative;
+      }
+      .container {
+        max-width: 1000px;
+        background-color: white;
+      }
+      img {
+        width: 100%;
+        height: 500px;
+        opacity: 0.9;
+      }
+      .img {
+        position: relative;
+        object-fit: cover;
+        height: auto;
+        width: 100%;
+      }
+      .sentra {
+        position: absolute;
+        color: whitesmoke;
+        right: 10px;
+        justify-content: center;
+        top: 200px;
+        font-size: 30px;
+        font-weight: bold;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+      .a {
+        font-size: 10px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        padding-right: 50px;
+      }
+      .img1 {
+        padding-left: 200px;
+      }
+      .img1 > div {
+        width: 250px;
+        height: 200px;
+        display: inline-block;
+        margin-right: 15px;
+        vertical-align: top;
+      }
+      .nm {
+        display: grid;
+        background-color: white;
+        
+      }
+      button {
+        padding: 10px;
+      }
+      .place {
+        height: auto;
+        width: 100vw;
+        position: relative;
+        padding-left: 200px;
+      }
+      strong {
+        color: blue;
+        font-size: large;
+      }
+      .rows > img {
+        height: 350px;
+      }
+      .cont {
+        position: absolute;
+        top: 450px;
+        width: 40%;
+        height: 10%;
+        }
+
+        .gallery {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(8, 5vw);
+        grid-gap: 1.5rem; 
+        }
+
+        .gallery__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block; 
+        }
+
+        .gallery__item--1 {
+        grid-column-start: 1;
+        grid-column-end: 6;
+        grid-row-start: 1;
+        grid-row-end: 7;
+        }
+
+        .gallery__item--2 {
+        grid-column-start: 6;
+        grid-column-end: 9;
+        grid-row-start: 1;
+        grid-row-end: 4;
+
+        }
+
+        .gallery__item--3 {
+        grid-column-start: 6;
+        grid-column-end:9 ;
+        grid-row-start: 4;
+        grid-row-end: 7;
+        }
+
+        .gallery__item--4 {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 7;
+        grid-row-end: 9;
+
+        }
+
+        .gallery__item--5 {
+        grid-column-start: 4;
+        grid-column-end: 9;
+        grid-row-start: 7;
+        grid-row-end: 9;
+        }
+
+      
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="img">
+        <img src="./slide_1.jpg" alt="" />
+        <div class="sentra">
+          Beautiful Template <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          Sentra
+          <div class="a">
+            This is a html Css template provided by templatemo website.
+            <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Please
+            tell your friends about our site.
+          </div>
+          <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>
+            Discover More
+          </button>
+        </div>
+      </div>
+
+      <div class="nm">
+        <div class="place">
+          <p>
+            Featured &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; praesent
+            pellentesque efficitur magna, <br /><strong>Place</strong>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sed
+            pellentesque neque malesuada vitae.
+          </p>
+        </div>
+        <div class="img1">
+          <div class="rows">
+            <img src="./featured_1.jpg" alt="" />
+            <p>
+              <b>Lorem ipsum dolor</b> <br>
+              Proin et sapien<br><br>
+              #1 Vestibulum ante ipsum primis in faucibus orci luctus et
+              ultrices posuere cubilia Curae; Sed at massa turpis. Fusce ut
+              pretium dui, vitae ullamcorper velit.
+            </p>
+          </div>
+          <div class="rows">
+            <img src="./featured_2.jpg" alt="" />
+            <p>
+              <b>Phasellus a lacus ac odio</b> <br>
+
+              Maximus <br><br>
+
+              #2 Vestibulum ante ipsum primis in faucibus orci luctus et
+              ultrices posuere cubilia Curae; Sed at massa turpis. Fusce ut
+              pretium dui, vitae ullamcorper velit.
+            </p>
+          </div>
+          <div class="rows">
+            <img src="./featured_3.jpg" alt="" />
+            <p>
+              <b>Proin sit amet fringilla</b> <br>
+
+              Vulputate
+              <br><br>
+              #3 Aliquam mollis lacus eget metus efficitur lobortis. Suspendisse
+              libero lacus, accumsan vitae commodo tristique, luctus gravida
+              metus.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="aa">
+        <div class="place">
+          <p>
+            Recent &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; praesent
+            pellentesque efficitur magna, <br /><strong>Projects</strong>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sed
+            pellentesque neque malesuada vitae.
+          </p>
+          <div class="cont">
+            <div class="gallery">
+                <figure class="gallery_item gallery_item--1">
+                    <img src="img1.jpg" alt="Gallery image 1" class="gallery__img">
+                </figure>
+                <figure class="gallery_item gallery_item--2">
+                    <img src="img2.jpg" alt="Gallery image 2" class="gallery__img">
+                </figure>
+                <figure class="gallery_item gallery_item--3">
+                    <img src="img3.jpg" alt="Gallery image 3" class="gallery__img">
+                </figure>
+                <figure class="gallery_item gallery_item--4">
+                    <img src="img4.jpg" alt="Gallery image 4" class="gallery__img">
+                </figure>
+                <figure class="gallery_item gallery_item--5">
+                    <img src="img5.jpg" alt="Gallery image 5" class="gallery__img">
+                </figure>
+                
+            </div>
+        </div>
+          
+        </div>
+      </div>
+
+
+      
+    </div>
+  </body>
+</html>
